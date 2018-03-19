@@ -46,7 +46,7 @@ public class HttpApplicationTest {
                 context.assertTrue(resp.succeeded());
                 context.assertEquals(resp.result().statusCode(), 200);
                 String content = resp.result().bodyAsJsonObject().getString("content");
-                context.assertEquals(content, String.format(template, "World"));
+                context.assertEquals(content, String.format(template, "JBoss.org"));
                 async.complete();
             });
     }
